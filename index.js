@@ -54,7 +54,7 @@ function processDecl(decl, from, to, mode, options) {
     }
 
     // ignore absolute urls or data uris
-    if (/^(?:[a-z]+:\/|data:.*)?\//.test(value)) {
+    if (/^(?:[a-z]+:\/|data:.*)?\/|^#default#VML$/.test(value)) {
       return createUrl(quote, value);
     }
 
